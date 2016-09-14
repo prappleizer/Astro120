@@ -1,0 +1,104 @@
+% Choose document class type
+\documentclass[12pt]{article}
+ 
+% Import packages
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{titling}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[font={it}]{caption}
+\graphicspath{ {/Users/malenarice/Desktop/Astro120/Labs/Lab1/Images/} } % Path to folder where your images are stored
+
+% Produce a title and header
+\setlength{\droptitle}{4em} 
+\begin{document} 
+\title{\vspace{-2cm} Title of my document \vspace{-0.6cm} }
+\author{By: Malena Rice \\ Group Members: Imad Pasha, Gaspard Duchene\thanks{Additional comments and acknowledgements.}}
+\date{}
+\maketitle
+
+% Use vspace to make your document more compact
+\vspace{-0.5cm}
+
+% Produce 2 columns to make the document compact
+\begin{multicols}{2}
+
+% Create titles for each section; use \section*{} to get rid of the section number
+\section{Abstract}
+CONCISE description of your lab and major results.
+
+\section{Introduction}
+Introduce the experiment.
+
+\section{Equipment and Data}
+Discuss data acquisition and describe equipment.
+
+\section{Analysis}
+Analyze the retrieved data.
+
+% Produce a table
+\vspace{2mm}
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{| c | c |}
+\hline
+\textbf{Column 1} & \textbf{Column 2} \\ \hline % Bold title names
+Element 1 & Value 1 \\ \hline
+Element 2 & Value 2  \\ \hline
+\end{tabular}
+\caption{Insert Your Caption Here.}
+\label{tab:size_categories}
+\end{center}
+\end{table}
+
+% Reference a figure; figure number will auto-update as you add figures.
+Refer to figures in the text using references: for example, Figure \ref{fig:my_plot}. 
+
+% Produce a figure
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{figure_1.png}
+\caption{Caption your figure here.}
+\label{fig:my_plot}
+\end{figure}
+
+% Produce an equation
+\begin{equation}
+F = \sigma_{SB} T^{4}
+\label{eq:my_equation}
+\end{equation}
+
+% Math references outside of an equation use Math Mode. Use $ to enter/exit math mode:
+Math mode example: $\alpha \beta \gamma$
+
+One full line in math mode:
+$$ F = \frac{L}{4\pi d^2} $$
+
+% Producing a numbered list:
+\textit{Numbered list:} % Italicize with \textit{}
+
+\begin{enumerate}
+\item{First item}
+\begin{enumerate}
+\item{Nested item 1}
+\item{Nested item 2}
+\end{enumerate}
+\item{Second item}
+\end{enumerate}
+
+% Producing a bullet point list:
+\textit{Bullet point list:} 
+
+\begin{itemize}
+\item{First item}
+\item{Second item}
+\begin{itemize}
+\item{Nested item 1}
+\item {Nested item 2}
+\end{itemize}
+\end{itemize}
+
+% Remember to end your multicols and document! LaTeX will complain if you forget these lines.
+\end{multicols}
+\end{document}
